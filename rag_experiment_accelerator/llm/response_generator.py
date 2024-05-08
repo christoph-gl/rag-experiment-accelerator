@@ -20,7 +20,7 @@ logger = get_logger(__name__)
 class ResponseGenerator:
     def __init__(self, environment: Environment, config: Config, deployment_name: str):
         self.config = config
-        self.deployment_name = deployment_name
+        self.deployment_name = "gpt-35-turbo"
         self.temperature = self.config.TEMPERATURE
         self.client = self._initialize_azure_openai_client(environment)
 
